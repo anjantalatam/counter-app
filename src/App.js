@@ -13,22 +13,20 @@ class App extends Component {
     ],
   };
 
-  constructor(props) {
-    super(props);
-    console.log("App Constructer created");
-  }
-
-  componentDidMount() {
-    //Ajax call
-    console.log("App- Mounted");
-  }
-
   handleIncrement = (counter) => {
     const counters = [...this.state.counters];
     const index = counters.indexOf(counter);
     counters[index] = { ...counters[index] };
     counters[index].value++;
-    // console.log(this.state.counters[index]);
+    this.setState({ counters });
+  };
+
+  handleDecrement = (counter) => {
+    // console.log("Decrement Success");
+    const counters = [...this.state.counters];
+    const index = counters.indexOf(counter);
+    counters[index] = { ...counter };
+    counters[index].value--;
     this.setState({ counters });
   };
 
@@ -46,8 +44,6 @@ class App extends Component {
   };
 
   render() {
-    console.log("App-Rendered");
-
     return (
       <React.Fragment>
         <NavBar counters={this.state.counters} />
@@ -56,6 +52,7 @@ class App extends Component {
             onIncrement={this.handleIncrement}
             onDelete={this.handleDelete}
             onReset={this.handleReset}
+            onDecrement={this.handleDecrement}
             counters={this.state.counters}
           />
         </main>

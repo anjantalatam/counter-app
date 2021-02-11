@@ -6,7 +6,6 @@ import React from "react";
 // }
 
 const NavBar = (props) => {
-  console.log("NavBAr Rendered");
   return (
     <nav className="navbar navbar-light bg-light">
       <a className="navbar-brand" href="www.youtube.com">
