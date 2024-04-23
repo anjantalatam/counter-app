@@ -9,7 +9,7 @@
     "@testing-library/user-event": "^12.6.0",
     "ansi-html": "0.0.7",
     "bootstrap": "^4.6.0",
-    "gh-pages": "^3.2.3",
+    "gh-pages": "^5.0.0",
     "immer": "^9.0.7",
     "nth-check": "^2.0.1",
     "postcss": "^8.4.1",
